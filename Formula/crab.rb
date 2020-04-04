@@ -3,16 +3,16 @@ class Crab < Formula
   desc "A versatile tool to crawl dozens of URLs from a given source, like a sitemap or an URL list.
 "
   homepage "https://github.com/atomicptr/crab"
-  version "1.1.2"
+  version "1.1.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/atomicptr/crab/releases/download/v1.1.2/crab_1.1.2_Darwin_x86_64.tar.gz"
-    sha256 "df1a5817ad137146857a49ad2b6e05c4228c44dbaf5a0e978177697d794473e3"
+    url "https://github.com/atomicptr/crab/releases/download/v1.1.3/crab_1.1.3_Darwin_x86_64.tar.gz"
+    sha256 "c1e2d89fd92815871c0c55a58a0a837fb391f4deea1e7746d4bdefef29bb6231"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/atomicptr/crab/releases/download/v1.1.2/crab_1.1.2_Linux_x86_64.tar.gz"
-      sha256 "1ac3cf57af085a5266f465f967c2bbab1f55a78f6b5a585ad7eaaaee54a79e63"
+      url "https://github.com/atomicptr/crab/releases/download/v1.1.3/crab_1.1.3_Linux_x86_64.tar.gz"
+      sha256 "48bb52c1f8e92a2b01d146e953b48954cda3daacb2dc30f8298e6cf662a99357"
     end
   end
 
