@@ -6,19 +6,35 @@ class Crab < Formula
   desc "A versatile tool to crawl dozens of URLs from a given source, like a sitemap or an URL list.
 "
   homepage "https://github.com/atomicptr/crab"
-  version "1.3.0"
-  bottle :unneeded
+  version "1.3.2"
 
-  if OS.mac?
-    url "https://github.com/atomicptr/crab/releases/download/v1.3.0/crab_1.3.0_Darwin_x86_64.tar.gz"
-    sha256 "07183a48ac497005b8ff48d423eefe56e7ca0b4b1cdf3707f518d1697890d694"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/atomicptr/crab/releases/download/v1.3.0/crab_1.3.0_Linux_x86_64.tar.gz"
-    sha256 "72c595455df2ed25f5de7b1e7819e9a6b78f0a0070f18ccf57f5f39ae7712312"
+  on_macos do
+    url "https://github.com/atomicptr/crab/releases/download/v1.3.2/crab_1.3.2_Darwin_x86_64.tar.gz"
+    sha256 "574234279a60497df19d9af2636d4993a81c60c1d07634f1427ee39fe2dc786b"
+
+    def install
+      bin.install "crab"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Crab
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
+      end
+    end
   end
 
-  def install
-    bin.install "crab"
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/atomicptr/crab/releases/download/v1.3.2/crab_1.3.2_Linux_x86_64.tar.gz"
+      sha256 "37d62e92c3bed02674a38a4e3ed9068969caa871818d84406ae73cee51379e4a"
+
+      def install
+        bin.install "crab"
+      end
+    end
   end
 end
