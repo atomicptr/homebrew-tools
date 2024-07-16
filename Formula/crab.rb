@@ -6,11 +6,11 @@ class Crab < Formula
   desc "A versatile tool to crawl dozens of URLs from a given source, like a sitemap or an URL list.
 "
   homepage "https://github.com/atomicptr/crab"
-  version "1.4.0"
+  version "1.4.1"
 
   on_macos do
-    url "https://github.com/atomicptr/crab/releases/download/v1.4.0/crab_1.4.0_darwin_amd64.tar.gz"
-    sha256 "9c2eac9afb0441698e5ae3c445253879455c51c5a13f1678eb9443d9092a3061"
+    url "https://github.com/atomicptr/crab/releases/download/v1.4.1/crab_1.4.1_darwin_amd64.tar.gz"
+    sha256 "39d8cd8a593c96e9f8b811220cf2506a264c0fcf73d5655f9aad2f01640356a5"
 
     def install
       bin.install "crab"
@@ -30,8 +30,8 @@ class Crab < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/atomicptr/crab/releases/download/v1.4.0/crab_1.4.0_linux_amd64.tar.gz"
-        sha256 "6ecdb3a73051a19cf0cc9313630402e5defc580961e6f086f17c5a24b61ec1b2"
+        url "https://github.com/atomicptr/crab/releases/download/v1.4.1/crab_1.4.1_linux_amd64.tar.gz"
+        sha256 "103aa01cb43a2c701a829249bedec9f2575cda96929e6d627c72ac482164c503"
 
         def install
           bin.install "crab"
