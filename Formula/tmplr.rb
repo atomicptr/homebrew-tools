@@ -11,7 +11,7 @@ class Tmplr < Formula
 
   on_macos do
     url "https://github.com/atomicptr/tmplr/releases/download/v0.1.3/tmplr_0.1.3_darwin_amd64.tar.gz"
-    sha256 "faf19d205fe4df875ffe36b330a7b33875e67ffd46d588c04d6247c142e89fc6"
+    sha256 "669ffc1cdc294c92a2d841e2d82e737cf93c4d62509e606ce6e22fb67e450985"
 
     def install
       bin.install "tmplr"
@@ -32,7 +32,7 @@ class Tmplr < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/atomicptr/tmplr/releases/download/v0.1.3/tmplr_0.1.3_linux_amd64.tar.gz"
-        sha256 "35d6b77b404a3e2e1a33883f1a94c409313e2f932a437058eed3438ce6e094b9"
+        sha256 "1ebdc336e563bdc6c369e940bce02ec0c80cf81513c8e1fe87bd748db0fd842c"
 
         def install
           bin.install "tmplr"
