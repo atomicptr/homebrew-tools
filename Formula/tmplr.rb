@@ -6,12 +6,12 @@ class Tmplr < Formula
   desc "Quickly create new files from templates
 "
   homepage "https://github.com/atomicptr/tmplr"
-  version "0.1.1"
-  license "GPL-3.0-later"
+  version "0.1.2"
+  license "GPL-3.0-or-later"
 
   on_macos do
-    url "https://github.com/atomicptr/tmplr/releases/download/v0.1.1/tmplr_0.1.1_darwin_amd64.tar.gz"
-    sha256 "5d544ac5565987b277e139e231f83f2fcda5dfe9e684f763806bfc5c13cbcad3"
+    url "https://github.com/atomicptr/tmplr/releases/download/v0.1.2/tmplr_0.1.2_darwin_amd64.tar.gz"
+    sha256 "d138af8b5ee757ec00b6051f3ad5719881dffac45cb285435a5b789d4f077960"
 
     def install
       bin.install "tmplr"
@@ -31,8 +31,8 @@ class Tmplr < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/atomicptr/tmplr/releases/download/v0.1.1/tmplr_0.1.1_linux_amd64.tar.gz"
-        sha256 "ba40e97c2eb182e945bdcae09a52bd01d886bb14baa424e6dd6acdf2ddb76195"
+        url "https://github.com/atomicptr/tmplr/releases/download/v0.1.2/tmplr_0.1.2_linux_amd64.tar.gz"
+        sha256 "271e92577bb86d9d7b7e0337d6eac5ff45b341102af8a4bc18cf0b18954b24e8"
 
         def install
           bin.install "tmplr"
